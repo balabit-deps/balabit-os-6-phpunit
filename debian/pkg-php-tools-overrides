@@ -1,0 +1,14 @@
+myclabs		deep-copy		php-deepcopy
+phpunit		php-code-coverage       php-codecoverage
+phpunit		php-file-iterator       php-file-iterator
+phpunit		php-invoker             php-invoker
+phpunit		php-text-template       php-text-template
+phpunit		php-timer               php-timer
+phpunit		phpunit-mock-objects    phpunit-mock-object
+sebastian	comparator              phpunit-comparator
+sebastian	diff                    phpunit-diff
+sebastian	environment             phpunit-environment
+sebastian	exporter                phpunit-exporter
+sebastian	global-state            phpunit-global-state
+sebastian	resource-operations	phpunit-resource-operations
+sebastian	version                 phpunit-version

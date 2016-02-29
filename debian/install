@@ -1,0 +1,2 @@
+phpunit	usr/bin
+src/* usr/share/php/PHPUnit

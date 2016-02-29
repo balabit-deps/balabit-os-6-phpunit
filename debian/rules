@@ -1,0 +1,45 @@
+#!/usr/bin/make -f
+
+UPSTREAM := $(shell head -1 debian/changelog | sed 's/.*(//;s/-.*).*//')
+
+%:
+	dh $@ --with phpcomposer
+
+override_dh_auto_build:
+	# Build static classloader for shipping
+	phpab --output src/Autoload.php \
+		--template debian/Autoload.php.tpl src
+	# Build classloader for tests
+	mkdir --parents vendor
+	phpab \
+		--output vendor/autoload.php \
+		--template debian/autoload.php.tpl \
+		--basedir vendor \
+		src tests
+	# Workaround to ensure the local class takes precedence during tests.
+	ln -s src PHPUnit
+
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	./phpunit
+else
+	@echo "** tests disabled"
+endif
+
+override_dh_installman:
+	mkdir --parent $(CURDIR)/debian/tmp
+	help2man \
+		--help-option=\  \
+		--version-string=$(UPSTREAM) \
+		--no-info \
+		--include=$(CURDIR)/debian/phpunit.1.in \
+		"./phpunit --help|tail -n+3|sed 's/^       phpunit/   or: phpunit/'" \
+		> $(CURDIR)/debian/tmp/phpunit.1
+	dh_installman
+
+override_dh_installchangelogs:
+	for i in $$(ls ChangeLog-*.md -r); do cat $$i >> CHANGELOG; done
+	dh_installchangelogs
+
+get-orig-source:
+	uscan --rename --verbose --force

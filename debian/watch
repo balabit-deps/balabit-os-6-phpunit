@@ -1,0 +1,2 @@
+version=3
+https://github.com/sebastianbergmann/phpunit/releases .*/archive/v?([\d\.]+)\.tar.gz

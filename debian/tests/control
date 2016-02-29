@@ -1,0 +1,3 @@
+Test-Command: mkdir -p vendor && phpab --output vendor/autoload.php --template debian/autoload.php.tpl --basedir vendor tests && phpunit
+Restrictions: rw-build-tree
+Depends: @, php-sqlite3, php-xdebug, php-xml, phpab, phpunit

@@ -1,0 +1,700 @@
+phpunit (5.1.3-1+ubuntu3) xenial; urgency=medium
+
+  * php-xml also needs to be a binary dependency.  LP: #1549552.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 28 Feb 2016 22:06:06 -0800
+
+phpunit (5.1.3-1+ubuntu2) xenial; urgency=medium
+
+  * Add php-xml as build-dep and test dep. 
+
+ -- Nishanth Aravamudan <nish.aravamudan@canonical.com>  Wed, 24 Feb 2016 16:48:57 -0800
+
+phpunit (5.1.3-1+ubuntu1) xenial; urgency=medium
+
+  * d/: update to PHP 7.0 dependencies.
+  * LP: #1544307.
+
+ -- Nishanth Aravamudan <nish.aravamudan@canonical.com>  Wed, 10 Feb 2016 13:49:43 -0800
+
+phpunit (5.1.3-1+build1) xenial; urgency=medium
+
+  * Revert phpunit-mock-object versioned dependency, now that both packages
+    have built. Package is back in sync.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 05 Jan 2016 11:54:04 +0100
+
+phpunit (5.1.3-1ubuntu1) xenial; urgency=medium
+
+  * Temporarily lower phpunit-mock-object versioned build dep to unbreak
+    cyclic build dependency.
+  * debian/rules: Fix regexp in UPSTREAM variable. This is only necessary
+    while we have an "ubuntuX" version suffix and can be dropped once we sync
+    again.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 05 Jan 2016 10:13:43 +0100
+
+phpunit (5.1.3-1) unstable; urgency=medium
+
+  [ Aaron Piotrowski ]
+  * Allow throwing any Throwable
+
+  [ Sebastian Bergmann ]
+  * Update ChangeLog
+  * Bump dependency
+  * Prepare release
+
+  [ Prach Pongpanich ]
+  * Bump Build-Depends on phpunit-mock-object to (>= 3.0.5)
+
+ -- Prach Pongpanich <prach@debian.org>  Thu, 17 Dec 2015 11:17:59 +0700
+
+phpunit (5.0.10-1) unstable; urgency=medium
+
+  [ Sebastian Bergmann ]
+  * Prepare release
+  * Fixed #1953: `Error`s raised outside the scope of a test method 
+    are not handled properly
+  * Fix CS/WS issues
+
+  [ Nicolas Grekas ]
+  * Fix insulated tests with phpdbg
+
+ -- Prach Pongpanich <prach@debian.org>  Tue, 01 Dec 2015 12:39:10 +0700
+
+phpunit (5.0.9-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Sebastian Bergmann ]
+  * Remove leftover references to PHPUnit_Selenium
+  * Prepare release
+
+  [ David Prévot ]
+  * Remove references to phpunit-selenium
+
+ -- David Prévot <taffit@debian.org>  Wed, 11 Nov 2015 12:28:38 -0400
+
+phpunit (5.0.8-2) unstable; urgency=medium
+
+  * Team upload, to unstable since everything is in place
+
+ -- David Prévot <taffit@debian.org>  Fri, 30 Oct 2015 15:47:53 -0400
+
+phpunit (5.0.8-1) experimental; urgency=medium
+
+  * Team upload, to experimental since some dependencies are new
+
+  [ Sebastian Bergmann ]
+  * Use short array syntax
+  * Depend on stable versions (in preparation for PHPUnit 5.0 release)
+  * Prepare release
+
+  [ David Prévot ]
+  * Revert "Track version 4 for the moment"
+  * Update for new dependencies
+
+ -- David Prévot <taffit@debian.org>  Mon, 26 Oct 2015 15:50:33 -0400
+
+phpunit (4.8.16-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Sebastian Bergmann ]
+  * Start PHPUnit 4.8 development
+  * Fix CS/WS issues
+  * Prepare release
+
+  [ David Prévot ]
+  * Track version 4 for the moment
+  * Update copyright for embedded phpab
+  * Drop now useless workaround
+  * Update dependencies
+  * Drop phpunit-story from suggests
+
+ -- David Prévot <taffit@debian.org>  Mon, 26 Oct 2015 12:30:41 -0400
+
+phpunit (4.7.6-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Sebastian Bergmann ]
+  * Prepare release
+
+ -- David Prévot <taffit@debian.org>  Thu, 02 Jul 2015 10:47:31 -0400
+
+phpunit (4.7.5-1) unstable; urgency=medium
+
+  * Team upload, to unstable since Jessie has been released
+
+  [ Sebastian Bergmann ]
+  * Prepare release
+
+  [ David Prévot ]
+  * Simplify build as upstream
+  * Drop currently failing test
+
+ -- David Prévot <taffit@debian.org>  Mon, 22 Jun 2015 21:23:38 -0400
+
+phpunit (4.6.4-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Sebastian Bergmann ]
+  * Update blacklist
+  * Prepare release
+
+ -- David Prévot <taffit@debian.org>  Sun, 12 Apr 2015 00:52:29 -0400
+
+phpunit (4.6.2-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Sebastian Bergmann ]
+  * Revert "Autoloading of Functions into `composer.json`"
+  * Prepare release
+
+  [ David Prévot ]
+  * Update homemade autoload
+
+ -- David Prévot <taffit@debian.org>  Tue, 07 Apr 2015 22:44:05 -0400
+
+phpunit (4.6.1-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Sebastian Bergmann ]
+  * Add ChangeLog
+  * Prepare release
+
+  [ David Prévot ]
+  * Install upstream changelog
+  * Update homemade Autoload.php
+  * Actually run PHPUnit tests suite on build
+  * Build-depend on php5-sqlite and php5-xdebug for tests
+
+ -- David Prévot <taffit@debian.org>  Fri, 03 Apr 2015 22:41:43 -0400
+
+phpunit (4.5.0-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Sebastian Bergmann ]
+  * Prepare release
+
+  [ David Prévot ]
+  * Update copyright
+  * Drop useless upstream README
+  * Update Homepage
+  * Handle new dependencies
+  * Fix rules: upstream build target is about tests
+  * Generate manpage at build time
+  * Provide DEP-8 tests
+
+ -- David Prévot <taffit@debian.org>  Tue, 10 Feb 2015 21:18:04 -0400
+
+phpunit (4.2.6-3) experimental; urgency=medium
+
+  * Team upload to experimental to respect the freeze
+
+  [ Daniel Beyer ]
+  * Add patch 0002-Fix-bootstrapping-in-process-isolation-with-unpreser.patch.
+    This fixes an issue with bootstrapping for tests run in process isolation
+    with an unpreserved global state. This issue is already closed by upstream
+    and fixed in phpunit 4.3.0.
+
+ -- David Prévot <taffit@debian.org>  Wed, 04 Feb 2015 06:21:32 -0400
+
+phpunit (4.2.6-2) unstable; urgency=medium
+
+  [ Prach Pongpanich ]
+  * Upload to unstable (Closes: #744876)
+
+  [ Daniel Beyer ]
+  * Fix tests can not be run in separate processes
+
+ -- Prach Pongpanich <prachpub@gmail.com>  Sun, 05 Oct 2014 01:40:09 +0700
+
+phpunit (4.2.6-1) experimental; urgency=medium
+
+  * Imported Upstream version 4.2.6
+  * Switch from PEAR to Composer source
+  * Update copyright 
+
+ -- Prach Pongpanich <prachpub@gmail.com>  Wed, 01 Oct 2014 20:10:00 +0700
+
+phpunit (3.7.28-2) unstable; urgency=medium
+
+  * Team upload
+  * Build-depend on recent pear-channels to get rid of php-symfony2-yaml
+  * Remove overrides now present in pear-channels
+  * Bump standards version to 3.9.6
+
+ -- David Prévot <taffit@debian.org>  Tue, 23 Sep 2014 16:55:34 -0400
+
+phpunit (3.7.28-1) unstable; urgency=medium
+
+  [ Prach Pongpanich ]
+  * New upstream release (Closes: #697343)
+    + PHPUnit no longer throws exceptions that do not extend
+      PHPUnit_Framework_Exception (Closes: #712667)
+  * Depends on php-codecoverage (>= 1.2.1) (Closes: #736147)
+  * Add Build-Depends on php5-cli (>= 5.3.7-1~) (Closes: #693369)
+  * Update debian/watch to point to pear.phpunit.de
+  * Bump debhelper compat to 9
+  * Add myself as uploader
+  * Use canonical URI in Vcs-* fields
+  * Build depend on pear-channels
+  * Bump Standard-Version to 3.9.5
+  * Change Build-depends on pkg-php-tools (>= 1.1~)
+    + Drop all debian/patches
+  * Add debian/pkg-php-tools-overrides
+  * Update the manpage
+  * Change the maintainers name to Debian PHP PEAR Maintainers
+  * Drop Replaces: phpunit2 and Suggests: phpunit-dbunit,
+    which are not present in the archive
+
+  [ David Prévot ]
+  * Drop php-invoker already brought by ${phppear:Debian-Recommends}
+  * Fix copyright years
+  * Remove overrides already present in pear-channels
+
+ -- Prach Pongpanich <prachpub@gmail.com>  Thu, 06 Feb 2014 11:42:12 +0700
+
+phpunit (3.6.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * Adopting the package (Closes: #607393).
+
+  [ Thomas Goirand ]
+  * Fixed debian/watch file to use the github tags.
+  * Added a debian/gbp.conf (and renamed branches on Alioth).
+  * Added Vcs fields.
+  * Switching package to pkg-php-tools.
+  * Standards-Version is now 3.9.3 (no change).
+  * Switched debian/copyright to format 1.0.
+  * Added a channel.xml file (as a quilt patch).
+  * Removed useless debian/phpunit-doc.doc-base, debian/docs, debian/dirs,
+  and debian/install (we are now using "pear install" with the package.xml...).
+  * Removed useless debian/README.Debian that was advising to get stuff
+  outside debian.
+  * Removed versions from Suggests:, removed double Section: in debian/control.
+  * Maintainer: is now PKG-PHP-PEAR team <pkg-php-pear@lists.alioth.debian.org>
+  * Patches package.xml to remove unwanted LICENSE file from binaries.
+  * Reviewed (new) dependencies of the binary package.
+
+  [ Olivier Berger ]
+  * Add dependency on php-codecoverage (Closes: #607372), and so many missing
+  dependencies.
+  * Remove phpunit-doc generation, as may not be rebuildable from sources.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 22 Apr 2012 12:53:21 +0800
+
+phpunit (3.5.5-2) unstable; urgency=low
+
+  * fix doc-base-file-references-missing-file
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Sat, 11 Dec 2010 18:19:39 +0300
+
+phpunit (3.5.5-1) unstable; urgency=low
+
+  * upload to debian
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Sat, 11 Dec 2010 14:23:30 +0300
+
+phpunit (3.5.5-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+    - Added support for getMockForAbstractClass() 
+      to the mock builder API.
+    - Added a ticket listener that interacts with 
+      the Trac issue API.
+    - Added support for E_USER_NOTICE and E_USER_WARNING 
+      to PHPUnit_Framework_Error_Notice and 
+      PHPUnit_Framework_Error_Warning, respectively.
+    - Refactored test dependency handling (required for a 
+      bugfix in PHPUnit_Selenium).
+    - Fixed --stop-on-failure.
+  * fix watch path
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Thu, 09 Dec 2010 14:08:50 +0300
+
+phpunit (3.5.3-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+    - Fixed GH-13: Result XML inconsistent when
+      data provider returns empty array or does not exist.
+    - Fixed the skeleton generator for tested classes.
+    - Strict mode is now compatible with process isolation.
+    - Worked around http://bugs.php.net/bug.php?id=52911
+      to make process isolation work on Windows.
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Mon, 01 Nov 2010 09:29:40 +0300
+
+phpunit (3.5.2-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+    - Fixed GH-30: --repeat option does not work.
+    - Fixed GH-34: Bogus bootstrap file raises cryptic error.
+    - Fixed GH-47: Failure message ignored in assertSelectCount().
+    - Fixed GH-48: Remove strict incomplete duplication.
+    - Tests that are incomplete or skipped no longer yield
+      code coverage in strict mode.
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Thu, 21 Oct 2010 00:17:20 +0400
+
+phpunit (3.5.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Implemented TRAC-834: Refactor collection, processing,
+      and rendering of code coverage information using the
+      [PHP_CodeCoverage](http://github.com/sebastianbergmann/
+      php-code-coverage) component.
+    - Implemented TRAC-948: Add D-BUS test listener.
+    - Implemented TRAC-967: Only populate whitelist when code
+      coverage is used.
+    - Implemented TRAC-985: Sort arrays before diff.
+    - Implemented TRAC-1033: Supplement commandline option
+      `--stop-on-error` and friends.
+    - Implemented TRAC-1038: Add `assertInstanceOf()`,
+      `assertAttributeInstanceOf()`, `assertNotInstanceOf()`, and
+      `assertAttributeNotInstanceOf()` as well as `assertInternalType()`,
+      `assertAttributeInternalType()`, `assertNotInternalType()`,
+      and `assertAttributeNotInternalType()`.
+    - Implemented TRAC-1039: Added support for `regexpi:`
+      matcher to Selenium RC driver.
+    - Implemented TRAC-1078: Added support for setting
+      superglobals via the XML configuration file.
+    - Added support for mocking/stubbing of static methods.
+      This requires PHP 5.3 and late static binding.
+    - Added `assertStringMatchesFormat()` and `assertStringNotMatchesFormat()`
+      as well as `assertStringMatchesFormatFile()` and
+      `assertStringNotMatchesFormatFile()` for `EXPECTF`-like
+      (`run-tests.php`) format string matching.
+    - Added `assertEmpty()` and `assertNotEmpty()` as well as
+      `assertAttributeEmpty()` and `assertAttributeNotEmpty()`.
+    - Added the `@expectedExceptionCode` and
+      `@expectedExceptionMessage` annotations.
+    - Added support for the [XML format of mysqldump](http://dev.mysql.com
+      /doc/refman/5.1/en/mysqldump.html#option_mysqldump_xml) to the
+      database extension.
+    - Added the `<includePath>` element to the `<php>` section of
+      the XML configuration file.
+    - Added the `verbose` attribute to the `<phpunit>` element of
+      the XML configuration file.
+    - Added a ticket listener that interacts with the GitHub issue API.
+    - Added a ticket listener that interacts with the GoogleCode issue API.
+    - Added a test listener that uses
+      [XHProf](http://mirror.facebook.net/facebook/xhprof/doc.html)
+      to profile the tested code.
+    - Added the `--strict` switch to mark tests that perform
+      no assertions as incomplete.
+    - The paths in the XML configuration file can now be relative to
+      the directory that contains the XML configuration file.
+    - The `@author` annotation is now an alias for `@group`
+      allowing to filter tests based on their authors.
+    - The `PHPUnit_Extensions_SeleniumTestCase::$autoStop`
+      flag has been removed, please start Selenium RC with
+      `-browserSessionReuse` instead.
+    - The `--log-metrics` and `--log-pmd` switches have been removed.
+      Their functionality has been or will be merged into
+      [PHP_Depend](http://pdepend.org/) and [PHPMD](http://phpmd.org/).
+      Details can be found [here](http://sebastian-bergmann.de/archives/
+      744-On-PHPUnit-and-Software-Metrics.html).
+    - The `--ansi` switch has been removed, please use `--colors` instead.
+    - The `--coverage-source` switch has been removed.
+    - The `--coverage-xml` switch has been removed, please use
+      `--coverage-clover` instead.
+    - The `--log-graphviz` switch has been removed.
+    - The `--log-xml` switch has been removed, please use
+      `--log-junit` instead.
+    - The `--report` switch has been removed, please use
+      `--coverage-html` instead.
+    - The `--skeleton` switch has been removed, please use
+      `--skeleton-test` instead.
+    - The `TestListener` implementation that logs to
+      [PEAR::Log](http://pear.php.net/package/Log) sinks has been removed.
+    - The test database functionality has been removed.
+    - The shared fixture functionality has been removed.
+    - `PHPUnit_Extensions_PerformanceTestCase` has been removed.
+    - `PHPUnit_Extensions_TicketListener_Trac` has been removed.
+    - The `PHPUnit_Extensions_Story_TestCase` functionality has been deprecated.
+    - Replaced `PHPUnit_Framework_MockObject` with the
+      [PHPUnit_MockObject](http://github.com/sebastianbergmann/
+      phpunit-mock-objects) component.
+    - Replaced `PHPUnit_Extensions_Database_TestCase` with the
+      [DbUnit](http://github.com/sebastianbergmann/dbunit) component.
+    - Replaced `PHPUnit_Extensions_SeleniumTestCase` with the
+      [PHPUnit_Selenium](http://github.com/sebastianbergmann/phpunit-selenium)
+      component.
+    - Replaced `PHPUnit_Util_FilterIterator` with the
+      [PHP_FileIterator](http://github.com/sebastianbergmann/php-file-iterator)
+      component.
+    - Replaced `PHPUnit_Util_Template` with the
+      [Text_Template](http://github.com/sebastianbergmann/php-text-template)
+      component.
+    - Replaced `PHPUnit_Util_Timer` with the
+      [PHP_Timer](http://github.com/sebastianbergmann/php-timer) component.
+    - Fixed TRAC-1068: `assertSame()` on two floats does not print the error
+      message.
+    - Fixed GH-7: Code paths that create a `PHPUnit_Framework_Warning`
+      end up serializing/unserializing globals unconditionally.
+    - PHPUnit now requires PHP 5.2.7 (or later) but PHP 5.3.3 (or later) is
+      highly recommended.
+  * Bump Standards-Version to 3.9.1, no change needed
+  * remove dbunit (LP: #595244)
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Mon, 27 Sep 2010 20:23:39 +0400
+
+phpunit (3.4.15-1) maverick; urgency=low
+
+  * New upstream release
+    F TRAC-939: Missing test classes when using process isolation
+    F TRAC-1024: setUpBeforeClass() does not work in process isolation
+    F TRAC-1075: empty <file></file> in phpunit.xml causes errors
+  * switch to quilt
+  * update getDoc
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Sun, 18 Jul 2010 23:18:44 +0400
+
+phpunit (3.4.14-1) unstable; urgency=low
+
+  * New upstream release
+    F TRAC-1057: phpunit_coverage.php deletes all
+      files in web server document root
+    F TRAC-1062: GlobalState::restoreSuperGlobalArray
+      throws error when global isn't an array
+    F TRAC-1063: Trailing Whitespace in files
+    F TRAC-1056: Badly done data providers cause crashes
+  * update manpage (Closes: #586214)
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Thu, 17 Jun 2010 20:05:03 +0400
+
+phpunit (3.4.13-1) unstable; urgency=low
+
+  * New upstream release
+    F TRAC-1035: PostgreSQL MetaData queries are incorrect
+    F TRAC-1043: method names in HTML code coverage report
+      are not properly escaped
+    F TRAC-1045: filter has problems with Umlaut
+  * update doc
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Tue, 25 May 2010 20:20:00 +0400
+
+phpunit (3.4.12-1) unstable; urgency=low
+
+  * New upstream release
+    I TRAC-1027: Declare a decent return-type in
+      PHPUnit_Framework_TestCase::getMock().
+    F TRAC-1013: Undefined index: _ENV running supplied tests.
+    F TRAC-1016: Usage of {} to access string offsets is deprecated.
+    F TRAC-1021: Depending on a test that uses a data provider does not work.
+    F TRAC-1030: Selenese tests cause double escaping of
+      Selenium actions and arguments.
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Sat, 10 Apr 2010 11:20:44 +0400
+
+phpunit (3.4.11-1) unstable; urgency=low
+
+  * New upstream release
+    F tearDownAfterClass() irregularly called with @dataProvider
+    F Missing include of PHPUnit_Framework_Exception in PHPUnit/Util/Filter.php
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Wed, 17 Feb 2010 10:55:59 +0300
+
+phpunit (3.4.10-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-Version to 3.8.4, no change needed
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Fri, 12 Feb 2010 20:40:06 +0300
+
+phpunit (3.4.9-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Wed, 03 Feb 2010 23:20:55 +0300
+
+phpunit (3.4.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Sat, 26 Dec 2009 02:42:24 +0300
+
+phpunit (3.4.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Sat, 28 Nov 2009 11:44:13 +0300
+
+phpunit (3.4.2+repack-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Wed, 04 Nov 2009 12:02:57 +0300
+
+phpunit (3.4.1+repack-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Mon, 12 Oct 2009 11:13:48 +0400
+
+phpunit (3.4.0+repack-1) unstable; urgency=low
+
+  * New upstream release
+  * update documentation
+  * update version number in patch and getDoc.sh
+  * Bump Standards-Version to 3.8.3, no change needed
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Thu, 17 Sep 2009 01:50:23 +0400
+
+phpunit (3.3.17+repack-2) unstable; urgency=low
+
+  * Fix debian/copyright - add CC License on doc
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Tue, 07 Jul 2009 09:58:09 +0400
+
+phpunit (3.3.17+repack-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix warnings (Closes: #534485)
+  * Fixed manpage (Closes: #529302)
+  * Added package phpunit-doc
+  * Removed package phpunit2
+  * Repacked original source (added documentation)
+  * Changed section from web to php
+  * Bump Standards-Version to 3.8.2, no change needed
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Mon, 29 Jun 2009 21:16:47 +0400
+
+phpunit (3.3.16-1) unstable; urgency=low
+
+  * New upstream release
+    - fix some bugs
+  * debian/control:
+    - Standards-Version: 3.8.1
+  * Update manpage
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Thu, 16 Apr 2009 23:13:35 +0400
+
+phpunit (3.3.15-1) unstable; urgency=low
+
+  * New upstream release
+    - fix some bugs
+  * Update manpage
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Sun, 01 Mar 2009 01:21:58 +0300
+
+phpunit (3.3.14-1) unstable; urgency=low
+
+  * New upstream release
+  * Update manpage to 3.3.14
+  * Fix build scpipt - in orig move phpunit to phpunit.php
+  * debian/watch: Updated.
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Mon, 16 Feb 2009 20:34:19 +0300
+
+phpunit (3.3.10-1) unstable; urgency=low
+
+  * New upstream release
+  * New mantainer. (Closes: #512687)
+  * Remove depend from php5. (Closes: #466767)
+  * debian/control:
+    - Standards-Version: 3.8.0
+  * Update manpage to 3.3.10
+  * Add patch for remove yui library
+    license problem - no source code avalible now and function is no usable
+
+ -- Ivan Borzenkov <ivan1986@list.ru>  Thu, 22 Jan 2009 02:16:47 +0300
+
+phpunit (3.2.16-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Thu, 27 Mar 2008 00:11:53 -0300
+
+phpunit (3.2.5-1) unstable; urgency=low
+
+  * New upstream release
+  * New mantainer. (Closes: #454908)
+  * Removed install of PHPUnit2 that was changed to PHPUnit.
+  * debian/control:
+    - Updated "Homepage:" pseudo-header as Reference 1.14.6.
+    - Standards-Version: 3.7.3
+  * Added phpunit.1 man page.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Fri, 14 Dec 2007 21:28:41 -0200
+
+phpunit (3.0.6-3) unstable; urgency=low
+
+  * QA upload, orphaning this package.
+
+ -- Bart Martens <bartm@debian.org>  Sat, 08 Dec 2007 08:58:27 +0100
+
+phpunit (3.0.6-2) unstable; urgency=low
+
+  * debian/control: Added transitional package "phpunit2".
+  * debian/watch: Updated.
+
+ -- Bart Martens <bartm@knars.be>  Sat, 16 Jun 2007 13:05:13 +0200
+
+phpunit (3.0.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/01missingfile.diff: Removed obsolete patch.
+  * debian/patches/02renamebin.diff: Removed obsolete patch.
+  * debian/control: Merging packages phpunit and phpunit2.  Closes: #424824.
+  * debian/rules, debian/control, debian/install, debian/links: Not using
+    /usr/share/cdbs/1/class/pear.mk so not Build-Depends on dh-make-php.
+  * debian/control, debian/copyright: Upstream homepage has moved.
+
+ -- Bart Martens <bartm@knars.be>  Sat, 19 May 2007 16:26:14 +0200
+
+phpunit2 (2.3.6-2) unstable; urgency=low
+
+  * debian/*: Repackaged with dh-make-pear version 0.1.3.
+  * debian/patches/01missingfile.diff: Missing Util/AllTests.php.
+  * debian/patches/02renamebin.diff: Install /usr/bin/phpunit2.
+  * debian/control: Added php-pear, php5-cli, php-benchmark to Depends.
+    Closes: #386516, #386803.
+  * debian/README.Debian: More documentation on the web.
+
+ -- Bart Martens <bartm@knars.be>  Sun, 10 Sep 2006 17:15:59 +0200
+
+phpunit2 (2.3.6-1) unstable; urgency=low
+
+  * New upstream release.  Note the two source packages, phpunit for use with
+    php4, and phpunit2 (this package) for use with php5.  Closes: #380468.
+
+ -- Bart Martens <bartm@knars.be>  Sun, 30 Jul 2006 12:42:40 +0200
+
+phpunit (1.3.2-2) unstable; urgency=low
+
+  * New maintainer.  Closes: #374437.
+  * debian/*: Repackaged with dh-make 0.41.
+  * debian/copyright: Updated to BSD license.
+  * PHPUnit-1.3.2/PHPUnit/GUI/Gtk.php: Fixed reference to license.
+  * debian/control: Added homepage to description.
+  * debian/watch: Added.
+
+ -- Bart Martens <bartm@knars.be>  Sun, 30 Jul 2006 10:59:20 +0200
+
+phpunit (1.3.2-1) unstable; urgency=low
+
+  * New upstream version.  (Closes: #340847)
+  * Orphaned.
+
+ -- Matthew Palmer <mpalmer@debian.org>  Mon, 19 Jun 2006 21:21:17 +1000
+
+phpunit (1.1.1-2) unstable; urgency=low
+
+  * Improved the message generation, including some refactoring and improved
+    message passing.
+
+ -- Matthew Palmer <mpalmer@debian.org>  Tue, 16 Nov 2004 15:19:32 +1100
+
+phpunit (1.1.1-1) unstable; urgency=low
+
+  * Initial release.  Closes: #273649.  Nice version number, don't you think?
+
+ -- Matthew Palmer <mpalmer@debian.org>  Sat,  6 Nov 2004 18:05:58 +1100

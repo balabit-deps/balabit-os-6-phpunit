@@ -1,0 +1,46 @@
+From: Prach Pongpanich <prachpub@gmail.com>
+Date: Tue, 30 Sep 2014 12:48:29 +0700
+Subject: Remove Composer autoload
+
+Forwarded: not-needed
+---
+ phpunit | 22 ++--------------------
+ 1 file changed, 2 insertions(+), 20 deletions(-)
+
+diff --git a/phpunit b/phpunit
+index 8948f6e..00def7d 100755
+--- a/phpunit
++++ b/phpunit
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env php
++#!/usr/bin/php
+ <?php
+ /*
+  * This file is part of PHPUnit.
+@@ -22,25 +22,7 @@ if (!ini_get('date.timezone')) {
+     ini_set('date.timezone', 'UTC');
+ }
+ 
+-foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+-    if (file_exists($file)) {
+-        define('PHPUNIT_COMPOSER_INSTALL', $file);
+-
+-        break;
+-    }
+-}
+-
+-unset($file);
+-
+-if (!defined('PHPUNIT_COMPOSER_INSTALL')) {
+-    fwrite(STDERR,
+-        'You need to set up the project dependencies using the following commands:' . PHP_EOL .
+-        'wget http://getcomposer.org/composer.phar' . PHP_EOL .
+-        'php composer.phar install' . PHP_EOL
+-    );
+-
+-    die(1);
+-}
++define('PHPUNIT_COMPOSER_INSTALL', 'PHPUnit/Autoload.php');
+ 
+ require PHPUNIT_COMPOSER_INSTALL;
+ 
